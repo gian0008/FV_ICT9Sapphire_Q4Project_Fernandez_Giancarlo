@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<style type="text/css">
+    
+.container{
+     
+        background-color: #1a7fab;
+        color: white;
+        height:50px;
+        border-style: ridge;
+        border-color: black;
+        border-width: 5px;
+        height: 500px;
+        border: 2px black;
+        border-radius: 50px;
+     }
+
+#milimeter{
+    
+    border-radius: 25px;
+    border: 2px solid #23faa8;
+    padding: 20px; 
+    width: 200px;
+    height: 15px;    
+
+}
+
+#result{
+   
+    
+    border-radius: 25px;
+    border: 2px solid #23faa8;
+    padding: 20px; 
+    width: 200px;
+    height: 15px;    
+
+}
+
+
+</style>
+
+<body style="background-image: url('chill.jpg');">
+
+<br>
+<br>
+    <div class="container" align="center">
+<br>
+        <h1> 📏UNIT CONVERTER📏 </h1>
+         <h5> Hanggang saan ka lang? </h5>
+<br>
+        <h4> Desired Value </h4>
+
+        <input type="number" placeholder="Type any number" id="milimeter">
+
+        <h4> =</h4>
+
+        <label for="result">Converted Value</label>
+        <br>
+    <input type="text" id="result" readonly />
+
+        <br>
+        <br>
+
+                            <input type="button" class="btn btn-outline-success btn-lg mr-3" onClick="miltocen()" value="To Centimeters">
+
+                             <input type="button" class="btn btn-outline-success btn-lg mr-3" onClick="miltomet()" value="To Meters">
+
+                             <input type="button" class="btn btn-outline-success btn-lg mr-3" onClick="miltokilo()" value="To Kilometers">
+        <br>
+        <br>
+        <h5> Tama, hanggang diyan ka lang. </h5>
+
+
+
+                             <script>
+                                    function miltocen(){
+                                        var x, y 
+                                        x = (document.getElementById('milimeter').value);
+                                        y = 10;
+                                       document.getElementById("result").value = (x / y);
+                                    }
+                                    function miltomet(){
+                                        var x, y
+                                        x = (document.getElementById('milimeter').value);
+                                        y = 1000;
+                                         document.getElementById("result").value = (x / y);
+                                    }
+                                    function miltokilo(){
+                                        var x, y
+                                        x = (document.getElementById('milimeter').value);
+                                        y = 1000000;
+                                        document.getElementById("result").value = (x / y);
+                                    }
+                                </script>
+
+    </div>
+
+</body>
+</html>
